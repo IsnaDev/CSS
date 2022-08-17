@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--tudo são caixas - box model
+    box-sizing = border-box (melhor) => reduz dentro dele, mantendo o tamanho. Não passa do valor solicitado.
+    box-sizing = contente-box (padrão) => soma os valores (width, height, padding, margem, border),
+                 ficando maior. Não mantém o valor solicitado.
+-->
+
+<body>
+    <h1>tudo são caixas</h1>
+    <p>meu parágrafo</p>
+    <div>minha div</div>
+</body>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    h1{
+        background-color: red;
+    }
+
+    p {
+        background-color: blue;        
+    }
+
+    div {
+        background-color: green;
+        height: 200px;
+        width: 200px;
+        padding: 20px;
+        border: 20px solid red;
+    }
+</style>
+</html>

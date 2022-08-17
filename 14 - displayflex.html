@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+</head>
+
+<body>
+    <h1>Display Flex/flexbox</h1> <!--reponsavidade: adaptar a diferentes tamanhos de telas-->
+    <div class="container"> <!--div tem o padrão display block -->
+        <div class="block">bloco1</div>
+        <div class="block">bloco2</div>
+        <div class="block">bloco3</div>
+        <div class="block">bloco4</div>
+        <div class="block">bloco5</div>
+    </div>
+</body>
+
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    margin: 10px;
+    border: 1px solid rosybrown;
+    display: flex; /*em linha*/
+    flex-direction: row; /*em linha: é o padrão
+                    row-reverse: em linha e inverte os itens
+                    column: em coluna
+                    column-reverse: em coluna e inicia da direita para a esquerda */
+    width: 400px;
+    height: 400px;
+    flex-wrap: nowrap; /*padrão.
+               wrap: quebra a linha
+               wrap-reverse: quebra a linha de trás para frente*/
+    flex-flow: row nowrap; /*para resumir flex-direction e flexwrap em apenas uma linha*/
+
+     /* MAIN AXIS    - eixo principal:   em linha, é o horizontal; em coluna, é o vertical
+       CROSS AXIS   - eixo secundário:  em linha, é o vertical; em coluna, é o horizontal*/
+       
+    justify-content/*justifica o conteúdo*/: center; /*alinha ao centro no eixo principal
+                                             flex-end: alinha no final do eixo principal
+                                             flex-start: alinha no começo do eixo principal
+                                             space-around: cria um espaço em volta do item
+                                             space-between: cria um espaço entre um item e outro*/ 
+    align-items: stretch; /*padrão: ocupa todo o eixo principal
+                 center: alinha ao centro baseado no eixo principal
+                 flex-star:alinha no começo
+                 flex-end: alinha ao final*/
+
+    /*para usar o align-content precisa ter bem definidos o width, heigth e flex-wrap (wrap)*/
+    align-content/*junta todos os itens para depois alinhar*/: center; /*alinha todos os itens no centro
+                                                               flex-star:alinha todos no começo
+                                                               flex-end: alinha todos ao final*/
+    gap: 40px; /*espaçamento entre os itens*/          
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    border: 5px solid royalblue;
+    border-radius: 5px;
+    color: brown;
+    font-weight: bolder;
+    text-align: center;
+    margin: 10px;
+    flex-basis: 100px; /*delimita o tamanho dos itens*/
+    flex-grow: 1; /*faz que os itens preencham os espaços vagos (aumentar)
+                    tem como colocar valores diferentes nos itens - no navegador, add o flex-grow*/
+    flex-shrink: 2;/*delimita o encolhimento do item
+                    se os itens tiverem com valores diferentes: eles encolhe diferentemente a partir  do valor que esta no flex-basis*/
+    flex: 100px 1 2; /*para resumir o flex-basis, flex-grow e flex-shrink. Os valores são colocados respectivamente na ordem*/
+    order: 1; /*muda a ordem dos itens. Coloca em cada iten */
+    align-self: center; /*pode alinhar apenas um iten ou quantos quiser
+                          usa as mesmas propriedades do align-content:
+                                center:     alinha ao centro
+                                flex-star:  alinha no começo
+                                flex-end:   alinha ao final*/
+
+    /*obs: pode consultar sobre flexbox no site: origamid.com
+            explica tudo detalhado*/
+}
+</style>
+
+</html>

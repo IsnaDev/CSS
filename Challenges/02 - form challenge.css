@@ -1,0 +1,66 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }    
+
+    .container {
+        border: 5px solid black;
+        padding: 10px;
+        margin: 15px;
+        background-color: #255C5B;
+    }
+
+    legend {
+        color: #947D0D;
+        font-size: 30px;
+        position: absolute;
+        font-weight: 300;
+        top: -6px;
+        padding: 0 6px;
+        background-color: black;
+    }
+
+    .name {
+        margin-top: 35px;
+    }
+
+    label {
+        color: #9AF568;
+        font-size: 18px;
+        margin-left: 30px;
+    }
+
+
+    input, textarea {
+        margin: 10px 10px 20px 20px;
+        border: 2px groove #EBD971;
+        border-radius: 10px;
+    }
+
+    .inpunt {
+        color: #947D0D;
+        font-size: 17px;
+        margin: 10px 20px 20px 20px;
+    }
+
+    button {
+        background-color: #59A2FF;
+        cursor: pointer;
+        margin: 10px 10px 20px 20px;
+        border: 3px groove #EBD971;
+        color: #060094;
+        font-size: 20px;
+        text-align: center;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    button:hover {
+        border: 5px solid #59A2FF;
+        background-color: #EBD971;
+        font-size: 25px;
+        color: #947D0D;
+    }

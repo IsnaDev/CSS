@@ -1,0 +1,162 @@
+<!--pseudo Pseudo-classes
+    :active         quando o elemento está ativo, ou seja, está sendo pressionado
+    :visited        seleciona o link que foi visitado
+    :hover          quando o mouse passa em cima do elemento
+    :checked        usado em radio/checkbox/select
+    :disabled       elemento desabilitado/button/input
+    :enabled        elemento está habilitado
+    :focus          é aplicado quando um elemento recebe foco, o que pode ocorrer quando o usuário seleciona o elemento
+    :read-only      seleciona input ou textarea que são apenas leitura
+    :empty          elemento que não tem filho
+
+    :first-child        primeiro filho (ex: primeira li de um ul ou primeiro span de uma div)
+    :first-of-type      primeiro elemento de seu tipo entre os filhos de seu elemento pai
+    :last-child         último filho
+    :last-of-type       último elemento de seu tipo entre os fihos de seu elemento pai
+    :not()              estiliza os elemento, exceto o que está dentro do ()
+    :nth-child()        seleciona o elemento baseado na sua posição (ex: nth-child(3))
+    :nth-last-child()   seleciona o elemento baseado na sua posição, contando de trás para frente
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo classes</title>
+</head>
+<body>
+
+    <button>clica aqui</button>
+
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes">developer-mozilla</a>
+    <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">w3-schools</a><br>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis labore cum aliquam maxime aliquid,
+        sunt explicabo natus vero architecto voluptas est eaque. Voluptatum in, rem impedit voluptatem earum
+        animi tempore!</p>
+
+    <input type="checkbox" placeholder="meu-input">
+    <input type="checkbox" placeholder="meu-input" disabled>
+    <input class="foco" placeholder="meu-input">
+    <input class="leitura" placeholder="somente leitura" readonly>
+
+    <div>empty</div><br>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul><br>
+
+    <div>
+        <span>oi</span>
+        <span>hello</span>
+        <span>hi</span>
+    </div><br>
+
+    <div class="oi">
+        <p>eueueue</p>
+        <p>oioioio</p>
+        <a>rsrsrsrs</a>
+        <a class="excluido">tututu</a>
+    </div><br>
+
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        display: block;
+        margin: 100px;
+        width: 100px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 15px;
+    }
+
+    /*elemento ativo quando clicado*/
+    button:active {
+        background-color: red;
+    }
+    
+    a {
+        display: block;
+        width: 10px;
+        font-size: 20px;
+    }
+
+    /*muda a cor do link, antes de clicar, quando passa o mouse sobre o mesmo*/
+    a:hover{
+        color: aqua;
+    }
+
+    /*muda a cor do link quando clicado/visitado*/
+    a:visited {
+        color: brown;
+    }
+
+    input {
+        display: block;
+        margin: 100px;
+        width: 150px;
+        height: 32px;
+    }
+
+    /* aplica ao ser clicado*/
+    input:checked {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* aplica enquanto está desabilitado*/
+    input:disabled {
+        width: 150px;
+        height: 150px;
+    }
+
+    /*quando foca o input*/
+    .foco:focus {
+        border: 1px solid red;
+        outline: none;
+    }
+
+    /*somente leitura*/
+    .leitura:read-only {
+        border: 1px solid blue;
+        outline: none;
+    }
+
+    /*aplica quando a div estiver vazia*/
+    div:empty  {
+        background: rebeccapurple;
+    }
+
+    /*aplica apenas para o primeiro da lista*/
+    li:first-child {
+        color: rgb(187, 6, 6);
+    }
+
+    /*aplica no primeiro elemento*/
+    span:first-of-type {
+        color: yellow
+    }
+
+    /*não aplica no que está dentro do (), pode ser usado com classe também*/
+    .oi :not(.excluido) {
+        color: brown;
+    }
+    
+</style>
+</html>

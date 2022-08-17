@@ -1,0 +1,100 @@
+<!--unidades de medidas
+    absolutas:
+        cm
+        in (1 polegada = 2.54cm)
+        px (1 pixel = 1/90 in)
+
+    relativas:
+        em, % (relativa ao elemento pai) (emphemeral unit - unidade transitória)
+        rem (relativo ao elemento root (raiz) - página html (padrão dos textos é 16px)) (emphemeral unit - unidade transitória)
+        vw ((view width - largura) viewport = tamanho da janela inteira width = largura)
+        vh ((view height - altura) viewport = tamanho da janela inteira height = altura)
+-->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+
+<body>
+    <h1>medidas absolutas - cm</h1>
+    <h2>medidas absolutas - in</h2>
+    <h3>medidas absolutas - px</h3>
+    
+    <h1>medidas relativas - em</h1>
+    <div id="div-pai"> div pai
+        <div id="div-filha">div filha</div>
+    </div>
+
+    <h4>medidas relativas - rem</h4>
+
+    <h1>medidas relativas - %</h1>
+    <div id="div-1"> div 1
+        <div id="div-2">div 2</div>
+    </div>
+
+    <h1>medidas relativas - vw e vh</h1>
+    <div id="div-3">
+        <div id="div-4"></div>
+    </div>
+</body>
+
+<style>
+    :root {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 2cm;
+    }
+
+    h2 {
+        font-size: 1in;
+    }
+
+    h3 {
+        font-size: 2px;
+    }
+
+    #div-pai {
+        font-size: 30px;
+    }
+
+    #div-filha {
+        font-size: 0.5em;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    #div-1 {
+        font-size: 32px;
+        background-color: red;
+        width: 300px;
+        height: 300px;
+    }
+
+    #div-2,
+    #div-4 {
+        font-size: 0.5em;
+        background-color: blueviolet;
+        width: 50%;
+        height: 50%;
+    }
+
+    #div-3 {
+        font-size: 32px;
+        background-color: red;
+        width: 50vw;
+        height: 50vh;
+    }
+</style>
+
+</html>

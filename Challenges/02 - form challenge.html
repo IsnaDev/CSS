@@ -1,0 +1,95 @@
+<!--
+    REGRAS DO DESAFIO
+
+[ ] retirar todas as tags <br> e manter o layout sem alterações visuais
+[ ] retirar o <fieldset e manter o layout sem alterações visuais
+[ ] alterar as cores da borda de todos os inputs
+[ ] alterar a fonte do projeto para "nunito"
+[ ] alterar o background do formulário
+[ ] alterar a cor e tamanho dos textos dos labels
+
+    - ao passar o mouse sobre os botões de limpar e enviar:
+
+[ ] trocar a cor do fundo
+[ ] aumentar o botão
+[ ] trocar a cor da letra e da borda
+[ ] o cursor terá que ser o da "mãozinha"
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./02 - form challenge.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,900;1,500&display=swap"
+        rel="stylesheet">
+    <title>form challenge</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <legend>Cadastro</legend>
+
+        <form action="" method="post" enctype="multipart/form-data">
+
+            <div class="name"><label> Nome </label></div>
+            <div><input type="text" name="nome" autofocus required></div>
+
+            <div><label> Email </label></div>
+            <div><input type="email" name="email" required></div>
+
+            <div><label> Idade </label></div>
+            <div><input type="number" name="idade" min="12" required></div>
+
+            <div><label> Data de Nascimento </label></div>
+            <div><input type="date" name="data-de-Nascimento" required></div>
+
+            <div><label> Onde você possui conta: </label></div>
+            <div class="inpunt">
+                <input type="checkbox" name="conta" value="Instagram"> Instagram
+                <input type="checkbox" name="conta" value="Facebook"> Facebook
+                <input type="checkbox" name="conta" value="Youtube"> Youtube
+            </div>
+
+            <div><label> Sexo </label></div>
+            <div class="inpunt">
+                <input type="radio" name="sexo" value="Masculino"> Masculino
+                <input type="radio" name="sexo" value="Feminino"> Feminino
+            </div>
+
+            <div><label> Cor dos Olhos </label>
+                <input type="color" name="Cor-dos-Olhos">
+            </div>
+
+            <div><label> Biografia </label></div>
+            <div><textarea type="text" name="Biografia"></textarea></div>
+
+            <div><label> Foto do perfil </label></div>
+            <div><input type="file" accept="images/*" name="Foto-do-perfil"></div>
+
+            <div><label> Telefone </label></div>
+            <div><input type="tel" name="Telefone" required></div>
+
+            <div><label> Link do Perfil do Facebook </label>
+                <div><input type="url" name="Link-do-Perfil-do-Facebook"></div>
+
+                <div><label> Senha </label></div>
+                <div><input type="password" name="Senha" minlength="6" maxlength="8" required></div>
+
+                <button type="reset" name="reset">Limpar</button>
+                <button type="submit" name="submit">Enviar</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

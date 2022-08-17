@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+</head>
+<body>
+    <div>minha div</div>
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+ 
+    /*100vw/vh = a tela é dividida em 100 pedacinhos (100% da tela)*/
+    div {
+        background: red;
+        width: calc((100vw + 100px) / 2);
+        height: calc(100vh - 200px);
+    }
+</style>
+</html>

@@ -1,0 +1,66 @@
+<!--Responsividade
+        all     para todos os dispositivos (colocando apena @media da no mesmo)
+        braille para dispositivos táteis
+        embossed    para dispositivos que imprimem em braile
+        handheld    para dispositivos portáteis, geralmente com telas pequenas e banda limitada
+        print       para impressão em papel
+        projection  para apresentação como PPS
+        screen      para monitores ou dispositivos com telas coloridas e resolução adequada
+        speech      para sintetizadores de voz. As CSS 2 tem uma especificação de CSS chamada AURAL,
+                    onde podemos formatar a voz dos sintetizadores.
+
+    orientação:
+        portrait    altura maior que a largura (ex: celular em pé)       
+        landscape   largura maior que altura (ex: celular deitado)
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsividade</title>
+</head>
+<body>
+    <div class="blue"></div>
+    <div class="red"></div>
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    div {
+        height: 600px;
+        width: 600px;
+        background: greenyellow;
+    }
+
+    /*é aplicado quando atinge o valor descrito:
+        nesse exemplo: fica greenyellow acima de 400px e abaixo de 400px fica blue*/
+    @media (max-width: 400px) {
+        .blue {
+            background: blue;
+        }
+    }
+
+    /*será aplicado quando for imprimir*/
+    @media print and (max-width: 400px) {
+        .blue {
+            background: yellow;
+        }
+    }
+
+    /*é aplicado quando atinge o valor descrito:
+        nesse exemplo: fica greenyellow abaixo de 400px e acima de 400px fica red*/
+    @media screen and (min-width: 400px) and (orientation: landscape) {
+        .red {
+            background: red;
+        }
+    }
+</style>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo elementos</title>
+</head>
+<body>
+    <button>clica aqui</button>
+
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes">developer-mozilla</a>
+    <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">w3-schools</a>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis labore cum aliquam maxime aliquid,
+        sunt explicabo natus vero architecto voluptas est eaque. Voluptatum in, rem impedit voluptatem earum
+        animi tempore!</p>
+
+    <input placeholder="meu-input">
+</body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        display: block;
+        margin: 100px;
+        width: 100px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+     /*muda a cor da primeira letra*/
+     p::first-letter {
+        color: brown;
+    }
+
+    /*muda a cor da primeira linha*/
+    p::first-line {
+        color: rgb(23, 212, 70);
+    }
+
+    a {
+        display: block;
+        width: 10px;
+        font-size: 20px;
+    }
+
+    /*coloca antes do conteúdo*/
+    a::before {
+        content: "*";
+    }
+
+    /*coloca depois do conteúdo*/
+    a::after {
+        content: "*";
+    }
+
+    input {
+        display: block;
+        margin: 100px;
+        width: 150px;
+        height: 32px;
+    }
+    
+    /*muda a cor e o tamanho da letra no placeholder*/
+    input::placeholder {
+        color: aqua;
+        font-size: 18px;
+    }
+</style>
+</html>

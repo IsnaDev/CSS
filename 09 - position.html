@@ -1,0 +1,82 @@
+<!--position: static (padrão)  não aceita valores de top, bottom, right e left 
+    position: fixed - fixa o elemento na tela
+    position: sticky - age como um adesivo, fixa o elemento só onde for determinado
+    position: relative - posição relativa a outro elemento ou a página
+    position: absolute - posição absoluta (fixa) a algum elemento ou a página
+                         Se não tiver pai ou o pai for static => posiciona referente a página
+                         se o pai não for static => posiciona referente ao pai
+
+    propriedades:
+        - top
+        - bottom
+        - left
+        - right
+    -->
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Position</title>
+    </head>
+    <body>
+        <di class="div-dad">0-static</di>
+        <div class="div-son1">1-fixed</div>
+        <div class="div-son2">2-sticky</div>
+        <div class="div-son3">3-relative</div>
+        <div class="div-son4">4-absolute</div>
+       
+    </body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            height: 200vh;
+            box-sizing: border-box;
+        }
+
+        .div-dad {
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            position: static;
+
+        }
+
+        .div-son1 {
+            height: 150px;
+            width: 150px;
+            background-color: rebeccapurple;
+            position: fixed;
+            left: 20px;
+            bottom: 0;
+        }
+
+        .div-son2 {
+            height: 350px;
+            width: 350px;
+            background-color: rosybrown;
+            position: sticky;
+            left: 50;
+            top: 50px;
+        }
+
+        .div-son3 {
+            height: 150px;
+            width: 150px;
+            background-color: greenyellow;
+            position: relative;
+            top: 30;
+        }
+
+        .div-son4 {
+            height: 150px;
+            width: 150px;
+            background-color: rgb(125, 193, 224);
+            position: absolute;
+        }
+    </style>
+    </html>

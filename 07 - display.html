@@ -1,0 +1,71 @@
+<!--
+    display - principais
+        - block: vem como padrão: div, section, p, h1...h6, ul, li, article
+            ocupa 100% da largura do elemento pai
+            sempre ocupa toda a sua linha
+            altura definida de acordo com o conteúdo
+
+        - inline: vem como padrão: a, span, b, i, em
+            elementos em linha
+            não permite alterar altura e largura
+            não podemos definir valores de margin top e bottom
+            ganha comportamento de uma palavra
+
+        - inline-block:
+            elementos na mesma linha, porém com características do display block
+            altura, largura e margin podem ser alterados
+
+        - grid
+        - flex
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispay</title>
+</head>
+<body>
+    <div class="block">display block</div>
+    <div class="block">display block</div>
+    <br><br>
+
+    <div class="inline">display inline</div>    
+    <div class="inline">display inline</div> 
+    <br>
+    
+    <div class="inline-block">display inline-block</div>
+    <div class="inline-block">display inline-block</div>
+</body>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .block {
+        background-color: green;
+        height: 120px;
+        width: 120px;
+        margin-top: 50px;
+    }
+
+    .inline {
+        background-color: blueviolet;
+        height: 120px;
+        width: 120px;
+        margin-top: 50px;
+        display: inline;
+    }
+
+    .inline-block {
+        background-color: red;
+        height: 120px;
+        width: 120px;
+        margin-top: 50px;
+        display: inline-block;
+    }
+</style>
+</html>

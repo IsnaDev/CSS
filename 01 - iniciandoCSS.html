@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+
+<body>
+    <h1 id="titulo">Minha Primeira aula de CSS</h1>
+
+    <p>CSS = Folha de Estilo em Cascata</p>
+    <p id="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut praesentium nisi laudantium mollitia corporis nihil
+        libero?
+        Rerum nesciunt a vel voluptatem, laudantium ipsum eos asperiores,
+        nostrum porro vitae tempore sequi.</p>
+
+    <button class="botao1">Clica em mim!</button>
+    <button class="botao1">Clica em mim!</button>
+    <button class="botao2">Clica em mim!</button>
+</body>
+
+<style>
+    /*É obrigatório o uso de ;
+    
+    Seletores:
+    * = para todos os elementos
+    class = serve para identificar vários elementos
+    id = serve para identificar apenas um elemento
+    */
+    h1 {
+        color: red;
+        background: black;
+    }
+
+    #titulo {
+        color: blue;
+        font-size: 55px;
+    }
+
+    p {
+        color: blue;
+    }
+
+    #paragrafo {        
+        font-size: 20px;
+    }
+
+    button {
+        background: greenyellow;
+        border-color: green;
+    }
+
+    .botao1 {
+        background: goldenrod;
+    }
+
+    #titulo, #paragrafo, .botao1, p {
+        font-weight: bold;
+    }
+</style>
+
+</html>
